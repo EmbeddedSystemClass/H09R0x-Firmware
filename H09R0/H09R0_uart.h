@@ -48,9 +48,6 @@
 #include "stm32f0xx_hal.h"
 
 /* External variables -----------------------------------------------*/
-extern FlagStatus UartRxReady;
-extern FlagStatus UartTxReady;
-extern uint8_t PcPort;
 
 	 
 // Blocking (polling-based) read
@@ -68,6 +65,7 @@ extern HAL_StatusTypeDef readPxMutex(uint8_t port, char *buffer, uint16_t n, uin
 extern HAL_StatusTypeDef writePxMutex(uint8_t port, char *buffer, uint16_t n, uint32_t mutexTimeout, uint32_t portTimeout);
 extern HAL_StatusTypeDef readPxITMutex(uint8_t port, char *buffer, uint16_t n, uint32_t mutexTimeout);
 extern HAL_StatusTypeDef writePxITMutex(uint8_t port, char *buffer, uint16_t n, uint32_t mutexTimeout);
+extern HAL_StatusTypeDef writePxDMAMutex(uint8_t port, char *buffer, uint16_t n, uint32_t mutexTimeout);
 
 
 
